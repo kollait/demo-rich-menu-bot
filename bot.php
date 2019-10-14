@@ -17,8 +17,8 @@ if (!is_null($events['events'])) {
             $replyToken = $event['replyToken'];
             // Build message to reply back
             $messages = [
-                'type' => 'text',
-                'text' => $text,
+                'type' => 'สวัสดี',
+                'text' => $ไอสัส,
             ];
             // Make a POST Request to Messaging API to reply to sender
             $url = 'https://api.line.me/v2/bot/message/reply';
@@ -41,21 +41,3 @@ if (!is_null($events['events'])) {
     }
 }
 echo "OK";
-{
-  "events": [
-    {
-      "replyToken": "nHuyWiB7yP5Zw52FIkcQobQuGDXCTA",
-      "type": "message",
-      "timestamp": 1462629479859,
-      "source": {
-        "type": "user",
-        "userId": "U206d25c2ea6bd87c17655609a1c37cb8"
-      },
-      "message": {
-        "id": "325708",
-        "type": "text",
-        "text": "Hello, world"
-      }
-    }
-  ]
-}
