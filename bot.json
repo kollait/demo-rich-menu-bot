@@ -16,3 +16,19 @@
     }
   ]
 }
+curl -X POST \-H 'Content-Type:application/json' 
+\-H 'Authorization: Bearer {Ph9Iw2Y6PiN0BrG98j8gxgELX8Zz1+DwFV1X9yubXB7H62CiOtFDydszhJh5jR6wP5UyUabKOdNNz6vL4GDQ9QdI0ssu9FnObIMDnDBt/x65rcsQbdWx/UXRpyrxla3+maixKZGebebuDjB+/ZW0V1GUYhWQfeY8sLGRXgo3xvw=}' 
+\-d '{    "replyToken":"nHuyWiB7yP5Zw52FIkcQobQuGDXCTA",    
+{
+  "messages": [
+    {
+      "type": "text",
+      "text": "Hello, user"
+    },
+    {
+      "type": "text",
+      "text": "May I help you?"
+    }
+  ]
+}
+' https://api.line.me/v2.1/bot/message/reply
