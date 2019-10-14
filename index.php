@@ -1,47 +1,11 @@
-{
-  "size": {
-    "width": 2500,
-    "height": 1686
-  },
-  "selected": true,
-  "name": "Rich Menu 1 - Copy",
-  "chatBarText": "Menu",
-  "areas": [
-    {
-      "bounds": {
-        "x": 25,
-        "y": 60,
-        "width": 1224,
-        "height": 777
-      },
-      "action": {
-        "type": "uri",
-        "uri": "https://store.line.me/"
-      }
-    },
-    {
-      "bounds": {
-        "x": 1275,
-        "y": 47,
-        "width": 1183,
-        "height": 775
-      },
-      "action": {
-        "type": "uri",
-        "uri": "https://line.me/en/pay"
-      }
-    },
-    {
-      "bounds": {
-        "x": 29,
-        "y": 895,
-        "width": 759,
-        "height": 747
-      },
-      "action": {
-        "type": "message",
-        "text": "Area 3"
-      }
-    }
-  ]
-}
+<?php
+require "vendor/autoload.php";
+$access_token = 'Ph9Iw2Y6PiN0BrG98j8gxgELX8Zz1+DwFV1X9yubXB7H62CiOtFDydszhJh5jR6wP5UyUabKOdNNz6vL4GDQ9QdI0ssu9FnObIMDnDBt/x65rcsQbdWx/UXRpyrxla3+maixKZGebebuDjB+/ZW0V1GUYhWQfeY8sLGRXgo3xvw=';
+$channelSecret = '5a620251ba162a0a6c51ad2b11c8dd85';
+$idPush = '1653324291'
+$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
+$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
+$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello world');
+$response = $bot->pushMessage($idPush, $textMessageBuilder);
+
+echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
