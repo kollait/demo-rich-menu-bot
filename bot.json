@@ -13,4 +13,5 @@ curl -X POST \-H 'Content-Type:application/json'
     }
   ]
 }
+}
 ' https://api.line.me/v2/bot/message/reply
